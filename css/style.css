@@ -1,0 +1,39 @@
+.arr{
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.xuli>p{
+    margin: 0;
+}
+.titleCollapse{
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgba(4, 160, 4, 0.63);
+    color: white;
+    transition: 0.4s;
+}
+a.titleCollapse:hover{
+    background-color: rgba(3, 141, 3, 0.781);
+    color: white;
+}
+#so{
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+.ketqua{
+    height: 50px;
+}
+.col-3{
+    align-self: center;
+}

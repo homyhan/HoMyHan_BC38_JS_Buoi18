@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập mảng</title>
+    <!-- BS 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <main class="main">
+                <div class="de">
+                    <h3>Cho người dùng nhập vào số nguyên và lưu trữ trong mảng
+                    </h3>
+                    <form action="">
+                        <input type="number" name="" id="number" placeholder="Nhập số nguyên">
+                        <button onclick="btnAdd()" class="btn btn-success btnThem" type="reset">Thêm</button>
+                    </form>
+                    <div class="arr mt-2" id="visibleArr"></div>
+                </div>
+                <div class="xuli">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="bai1 mt-4">
+                                <h5>1. Tính tổng các số nguyên dương</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result1"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex1()" class="btn btn-success w-100">Tinh</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai2 mt-4">
+                                <h5>2. Đếm số nguyên dương</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result2"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex2()" class="btn btn-success w-100">Đếm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai3 mt-4">
+                                <h5>3. Tìm số nhỏ nhất trong mảng</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result3"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex3()" class="btn btn-success w-100">Tìm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai4 mt-4">
+                                <h5>4. Số dương nhỏ nhất trong mảng</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result4"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex4()" class="btn btn-success w-100">Tìm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai5 mt-4">
+                                <h5>5. Tìm số chẳn cuối cùng trong mảng</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result5"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex5()" class="btn btn-success w-100">Tìm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai6 mt-4">
+                                <h5>6. Đổi chỗ 2 phần tử</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <input class="w-100" type="text" id="local1" placeholder="Nhập vị trí 1">
+                                                <input class="w-100" type="text" id="local2" placeholder="Nhập vị trí 2">
+                                            </div>
+
+                                            <div class="col-8">
+                                                <div class="ketqua alert alert-success my-0" id="result6"></div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex6()" class="btn btn-success w-100">Đổi chỗ</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai7 mt-4">
+                                <h5>7. Sắp xếp mảng tăng dần</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result7"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex7()" class="btn btn-success w-100">Sắp xếp</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai8 mt-4">
+                                <h5>8. Tìm số nguyên tố đầu tiên trong mảng</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result8"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex8()" class="btn btn-success w-100">Tìm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai9 mt-4">
+                                <h5>9. Nhập thêm một mảng số thực. Đếm số lượng số nguyên</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <form action="">
+                                            <input type="number" placeholder="Nhập số thực" id="numberEx9">
+                                            <button onclick="btnAddEx9()" type="reset" class="btn btn-success mb-1" id="btnAdd9">Thêm</button>
+                                            <div style="height: 50px;" class="arr " id="visibleArrEx9"></div>
+                                            <div class="ketqua alert alert-success my-0 mt-3" id="result9"></div>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex9()" class="btn btn-success w-100">Đếm</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bai10 mt-4">
+                                <h5>10. So sánh số lượng số dương và số lương số âm</h5>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="ketqua alert alert-success my-0" id="result10"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button onclick="ex10()" class="btn btn-success w-100">So sánh</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- BS 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- MAIN JS  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
